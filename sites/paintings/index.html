@@ -4,17 +4,14 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Виставка картин XVIII сторіччя | Картинна галерея</title>
     <style type="text/css">
-    #smallscreennav{background-color: black;color:white;text-align:center;display: none;}
+    .smallscreennav{background-color: black;color:white;text-align:center;display: none;}
 
     @media only screen and (max-width: 600px) {
-      #normalscreennav{display:none;}
-      #smallscreennav{display: block; padding: 10px;}
-      a{text-color: white;}
+      .normalscreennav{display:none;}
+      .smallscreennav{display: block; padding: 10px;}
+
     }
     </style>
-
-
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -32,26 +29,26 @@
   </head>
   <body>
 
-<div id="normalscreennav">
-    <nav style="width:100%; background-color:black;" class="navbar navbar-expand-md navbar-dark" >
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
-		</div>
-    <ul id="navui" class="navbar-nav mr-auto" role="tablist" id="menu" style=" p-right:0px;">
-      <li role="presentation" class="nav-item active"><a class="nav-link" href="#tab1" role="tab" data-toggle="tab">Замовити квиток</a></li>
-      <li role="presentation" class="nav-item active"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Як дістатися</a></li>
-    </ul>
+<div class="normalscreennav">
+  <nav style="width:100%; background-color:black;" class="navbar navbar-expand-md navbar-dark" >
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
+  </div>
+  <ul  class="navbar-nav mr-auto" role="tablist" id="menu" style=" p-right:0px;">
+    <li role="presentation" class="nav-item active"><a class="nav-link" href="#tab1" role="tab" data-toggle="tab">Замовити квиток</a></li>
+    <li role="presentation" class="nav-item active"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Як дістатися</a></li>
+  </ul>
 
-    </nav>
+  </nav>
 </div>
-<div id=smallscreennav>
+<div class=smallscreennav id="menu">
 
     <a  href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
     <p>
-      <a href="#tab1" role="tab" data-toggle="tab" style="color:white;text-decoration:none;">Замовити квиток  </a>
+      <a href="#tab1" id="menu" style="color:white;text-decoration:none;">Замовити квиток  </a>
     </p>
     <p>
-      <a href="#tab2" role="tab" data-toggle="tab" style="color:white;text-decoration:none;">  Як дістатися</a>
+      <a href="#tab2" id="menu" style="color:white;text-decoration:none;">  Як дістатися</a>
     </p>
 </div>
     <div class="" style="height:80%;width:auto;position:relative;z-index:1;">
@@ -64,10 +61,10 @@
 					<div class="carousel-item" style="width:100%;height:100%;background-image:url(images/8299.jpg); background-size: cover;">
 					</div>
 				</div>
-				
+
 			</div>
 			<article style="background-color:black;height:100%;width:100%;position:absolute;opacity: 0.4;z-index:3;"><div style="font-size:45px;font-family:calibri;position:relative;top:30%;bottom:50%;color:white;text-align:center;z-index:3;"><h1 >Виставка картин</h1><p style="font-size:20px;">XVIII Сторіччя</p></div></article>
-		
+
 
 
     </div>
@@ -221,7 +218,7 @@
     </div>
     </div>
 
-    <div id="tab2" ">
+    <div id="tab2">
 		<br>
 		<br>
         <h3 align="center">Як дістатися</h3>
@@ -247,7 +244,7 @@
 				<br>
       </div>
       </div>
-      
+
       </div>
       </div>
 <footer style="background-color:black;height:270px;postition:relative;">
