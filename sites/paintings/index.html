@@ -33,32 +33,31 @@ $(document).ready(function(){
        $('body,html').animate({scrollTop: top}, 1500);
    });
 });
+
 </script>
   </head>
   <body>
+	<div class="normalscreennav">
+	  <nav style="width:100%; background-color:black;" class="navbar navbar-expand-md navbar-dark" >
+	  <div class="navbar-header">
+		<a class="navbar-brand" href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
+	  </div>
+	  <ul  class="navbar-nav mr-auto" role="tablist" id="menu" style=" p-right:0px;">
+		<li role="presentation" class="nav-item active"><a class="nav-link" href="#tab1" role="tab" data-toggle="tab">Замовити квиток</a></li>
+		<li role="presentation" class="nav-item active"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Як дістатися</a></li>
+	  </ul>
 
-<div class="normalscreennav">
-  <nav style="width:100%; background-color:black;" class="navbar navbar-expand-md navbar-dark" >
-  <div class="navbar-header">
-    <a class="navbar-brand" href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
-  </div>
-  <ul  class="navbar-nav mr-auto" role="tablist" id="menu" style=" p-right:0px;">
-    <li role="presentation" class="nav-item active"><a class="nav-link" href="#tab1" role="tab" data-toggle="tab">Замовити квиток</a></li>
-    <li role="presentation" class="nav-item active"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Як дістатися</a></li>
-  </ul>
-
-  </nav>
-</div>
-<div class=smallscreennav id="menu">
-
-    <a  href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
-    <p id="smallmenu">
-      <a href="#tab1" id="menu" style="color:white;text-decoration:none;">Замовити квиток  </a>
-    </p>
-    <p id="smallmenu">
-      <a href="#tab2" id="menu" style="color:white;text-decoration:none;">  Як дістатися</a>
-    </p>
-</div>
+	  </nav>
+	</div>
+	<div class=smallscreennav id="smallmenu">
+		<a  href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
+		<p>
+		  <a href="#tab1" style="color:white;text-decoration:none;">Замовити квиток  </a>
+		</p>
+		<p>
+		  <a href="#tab2" style="color:white;text-decoration:none;">  Як дістатися</a>
+		</p>
+	</div>
     <div class="" style="height:80%;width:auto;position:relative;z-index:1;">
 			<div id="demo" class="carousel slide" data-ride="carousel" style="width:100%;height:100%;position:absolute;z-index:2;">
 				<div class="carousel-inner">
