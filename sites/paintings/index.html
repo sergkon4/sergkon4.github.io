@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Виставка картин XVIII сторіччя | Картинна галерея</title>
+    <style type="text/css">
+    #smallscreennav{background-color: black;color:white;text-align:center;display: none;}
+
+    @media only screen and (max-width: 600px) {
+      #normalscreennav{display:none;}
+      #smallscreennav{display: block; padding: 10px;}
+      a{text-color: white;}
+    }
+    </style>
+
+
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -19,17 +31,28 @@
 </script>
   </head>
   <body>
-<div>
+
+<div id="normalscreennav">
     <nav style="width:100%; background-color:black;" class="navbar navbar-expand-md navbar-dark" >
 		<div class="navbar-header">
 			<a class="navbar-brand" href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
 		</div>
-    <ul  class="navbar-nav mr-auto" role="tablist" id="menu" style=" p-right:0px;">
+    <ul id="navui" class="navbar-nav mr-auto" role="tablist" id="menu" style=" p-right:0px;">
       <li role="presentation" class="nav-item active"><a class="nav-link" href="#tab1" role="tab" data-toggle="tab">Замовити квиток</a></li>
       <li role="presentation" class="nav-item active"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Як дістатися</a></li>
     </ul>
 
     </nav>
+</div>
+<div id=smallscreennav>
+
+    <a  href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
+    <p>
+      <a href="#tab1" role="tab" data-toggle="tab" style="color:white;text-decoration:none;">Замовити квиток  </a>
+    </p>
+    <p>
+      <a href="#tab2" role="tab" data-toggle="tab" style="color:white;text-decoration:none;">  Як дістатися</a>
+    </p>
 </div>
     <div class="" style="height:80%;width:auto;position:relative;z-index:1;">
 			<div id="demo" class="carousel slide" data-ride="carousel" style="width:100%;height:100%;position:absolute;z-index:2;">
