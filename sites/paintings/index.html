@@ -25,6 +25,14 @@
         $('body,html').animate({scrollTop: top}, 1500);
     });
 });
+$(document).ready(function(){
+   $("#smallmenu").on("click","a", function (event) {
+       event.preventDefault();
+       var id  = $(this).attr('href'),
+           top = $(id).offset().top;
+       $('body,html').animate({scrollTop: top}, 1500);
+   });
+});
 </script>
   </head>
   <body>
@@ -44,10 +52,10 @@
 <div class=smallscreennav id="menu">
 
     <a  href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
-    <p>
+    <p id="smallmenu">
       <a href="#tab1" id="menu" style="color:white;text-decoration:none;">Замовити квиток  </a>
     </p>
-    <p>
+    <p id="smallmenu">
       <a href="#tab2" id="menu" style="color:white;text-decoration:none;">  Як дістатися</a>
     </p>
 </div>
