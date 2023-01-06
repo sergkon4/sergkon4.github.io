@@ -4,7 +4,9 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Виставка картин XVIII сторіччя | Картинна галерея</title>
     <style type="text/css">
-    .smallscreennav{background-color: black;color:white;text-align:center;display: none;}
+    	.smallscreennav{background-color: black;color:white;text-align:center;display: none;}
+	.smallmenulink{color:white;text-decoration:none;}
+	.smallmenulink:hover{text-decoration:none; color:#C5CFFF;}
 
     @media only screen and (max-width: 600px) {
       .normalscreennav{display:none;}
@@ -12,7 +14,7 @@
 
     }
     </style>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -52,10 +54,10 @@ $(document).ready(function(){
 	<div class=smallscreennav id="smallmenu">
 		<a  href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
 		<p>
-		  <a href="#tab1" style="color:white;text-decoration:none;">Замовити квиток  </a>
+		  <a href="#tab1" class="smallmenulink">Замовити квиток  </a>
 		</p>
 		<p>
-		  <a href="#tab2" style="color:white;text-decoration:none;">  Як дістатися</a>
+		  <a href="#tab2"  class="smallmenulink">  Як дістатися</a>
 		</p>
 	</div>
 	  <div class="" style="height:80%;width:auto;position:relative;z-index:1;">
