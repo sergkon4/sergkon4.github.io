@@ -4,10 +4,8 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <style type="text/css">
   .roundedcorners1{
     border-radius: 25px;
@@ -15,18 +13,20 @@
   .mainimage{
     border-radius: 25px;
   }
-  .footerlink{text-decoration:none;color: rgba(255,255,255, 0.9);}
-  .footerlink:hover{text-decoration:none;color: rgba(255,255,255, 0.8);}
   @media only screen and (max-width: 600px) {
       .mainimage{
         display:none;
       }
   }
-    animatedbutton{
-      background-color:#7bae37;
-      transition: background-color 2s ease-out;
-    }
-    animatedbutton:hiver{background-color:grey;}
+  .animatedbutton{
+	background-color:#7bae37;
+	transition: background-color 1s ease-out;
+  }
+  .animatedbutton:hover{
+	background-color:grey;
+	transition: background-color 1s ease-out;
+	cursor:pointer;
+  }
   </style>
 </head>
 <body>
@@ -41,13 +41,13 @@
     <ul class="navbar-nav ml-auto" >
 
       <li class="nav-item"  style="padding-right:40px;">
-        <a class="nav-link" href="#">Послуги</a>
+        <a class="nav-link" href="#" style="color:black;">Послуги</a>
       </li>
       <li class="nav-item" style="padding-right:40px;">
-        <a class="nav-link" href="#">Про нас</a>
+        <a class="nav-link" href="#" style="color:black";>Про нас</a>
       </li>
       <li class="nav-item" style="padding-right:40px;">
-        <a class="nav-link" href="#">Контакти</a>
+        <a class="nav-link" href="#" style="color:black;">Контакти</a>
       </li>
       <li class="nav-item">
         <p></p>
@@ -62,10 +62,10 @@
     </div>
     <div class="col-sm-5" style="background-color:white; text-align:center;padding:0;">
       <p style="padding:5%;font-size:19px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <button type="submit" id="animatedbutton" class="btn btn-info" style="background-color:#7bae37; line-color:black; border-radius:50px; border:0px; height:55px;color:white; width:60%;"><b>Замовити послугу</b></button>
+      <button type="submit" class="animatedbutton" style="line-color:black; border-radius:50px; border:0px; height:55px;color:white; width:60%;"><b>Замовити послугу</b></button>
     </div>
     <div class="col-sm-5" style="background-color:white; text-align:center;">
-      <img class="mainimage" src="images\pic1.jpg" width="100%">
+      <img class="mainimage" src="pic1.jpg" width="100%">
     </div>
     <div class="col-sm-1" style="background-color:white; text-align:center;">
     </div>
@@ -75,15 +75,15 @@
   <h1 style="padding: 70px 0;text-align: center;">Ми робимо нічого</h1>
   <div class="row">
     <div class="col-sm-4" style="background-color:white; text-align:center;"><h2>Нічого</h2>
-      <img class="roundedcorners1" src="images\pic4.jpg" width="100%">
+      <img class="roundedcorners1" src="pic4 (2).jpg" width="100%">
       <p style="padding:5%;font-size:19px; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
     <div class="col-sm-4" style="background-color:white; text-align:center;"><h2>Нічого</h2>
-      <img class="roundedcorners1" src="images\pic2.jpg" width="100%">
+      <img class="roundedcorners1" src="pic2.jpg" width="100%">
       <p style="padding:5%;font-size:19px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 <div class="col-sm-4" style="background-color:white; text-align:center;"><h2>Нічого</h2>
-  <img class="roundedcorners1" src="images\pic3.jpg" width="100%">
+  <img class="roundedcorners1" src="pic3.jpg" width="100%">
   <p style="padding:5%;font-size:19px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
   </div>
@@ -91,10 +91,10 @@
 <div style="padding: 150px 0;text-align: center;">
   <H2>Скористайтесь нашою послугою</h2>
   <p><br></p>
-  <button type="submit" class="btn btn-info" style="background-color:#7bae37; line-color:black; border-radius:50px; border:0px; height:60px;width: 300px;color:white;"><b>Замовити послугу</b></button>
+  <button type="submit" class="animatedbutton" style="line-color:black; border-radius:50px; border:0px; height:60px;width: 300px;color:white;"><b>Замовити послугу</b></button>
 </div>
 <footer style="height:300px; background-color:black;padding:70px 0">
-  <p style="text-align:center; color:white;"><a href="" class="footerlink">Послуги</a> | <a href="" class="footerlink">Про нас</a> | <a href="" class="footerlink">Контакти</a></p>
+  <p style="text-align:center; color:white;"><a href="" style="color:white;">Послуги</a> | <a href="" style="color:white;">Про нас</a> | <a href="" style="color:white;">Контакти</a></p>
   <p style="text-align:center; color:white;">&copy 2021 Сергій Кондратюк</p>
   <p style="text-align:center;"><a href="facebook.com" class="footerlink"><img src="images/facebook.png" height="35px"></a> <a href="facebook.com" class="footerlink"><img src="images/twitter1.png" height="35px"></a> <a href="facebook.com" class="footerlink"><img src="images/Instagram.png" height="35px"></a></p></div>
 </footer
