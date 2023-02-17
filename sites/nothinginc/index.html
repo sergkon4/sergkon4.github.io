@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
-  
   <style type="text/css">
   .roundedcorners1{
     border-radius: 25px;
@@ -28,14 +27,37 @@
 	transition: background-color 1s ease-out;
 	cursor:pointer;
   }
+  #phonemenu{
+  color:black;
+  display:none;
+  }
+  .phonemenulink{
+  color:black;
+  margin-left:50px;
+  text-decoration: none;
+  }
+  .phonemenulink:hover{
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  }
   </style>
+  <script>
+	function myFunction() {
+  var x = document.getElementById("phonemenu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+} 
+  </script>
 </head>
 <body>
 
   <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-white" style="height:100px; padding:50px;" >
 		<a class="navbar-brand" href="#">●<b>Nothing.inc</b></a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <button class="navbar-toggler" onclick="myFunction()">
 			<span class="navbar-toggler-icon"></span>
 		  </button>
 
@@ -58,6 +80,11 @@
 		</div>
 	</nav>
 </header>
+<div id="phonemenu">
+<p><a class="phonemenulink" href="#"><b>Послуги</b></a></p>
+<p><a class="phonemenulink" href="#"><b>Про нас</b></a></p>
+<p><a class="phonemenulink" href="#"><b>Контакти</b></a></p>
+</div>
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-1" style="background-color:white; text-align:center;">
