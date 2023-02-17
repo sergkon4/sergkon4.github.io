@@ -22,6 +22,11 @@
         display:none;
       }
   }
+    animatedbutton{
+      background-color:#7bae37;
+      transition: background-color 2s ease-out;
+    }
+    animatedbutton:hiver{background-color:grey;}
   </style>
 </head>
 <body>
@@ -57,7 +62,7 @@
     </div>
     <div class="col-sm-5" style="background-color:white; text-align:center;padding:0;">
       <p style="padding:5%;font-size:19px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <button type="submit" class="btn btn-info" style="background-color:#7bae37; line-color:black; border-radius:50px; border:0px; height:55px;color:white; width:60%;"><b>Замовити послугу</b></button>
+      <button type="submit" id="animatedbutton" class="btn btn-info" style="background-color:#7bae37; line-color:black; border-radius:50px; border:0px; height:55px;color:white; width:60%;"><b>Замовити послугу</b></button>
     </div>
     <div class="col-sm-5" style="background-color:white; text-align:center;">
       <img class="mainimage" src="images\pic1.jpg" width="100%">
