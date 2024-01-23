@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript "Operating system"</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #desktop {
+            background-image: url('img.jpg'); /* Replace with the path to your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh;
+            overflow: hidden;
+            padding-top: 40px;
+            box-sizing: border-box;
+        }
+
+        .icon {
+            text-align: center;
+            margin: 20px;
+            width: 100px; /* Set the width to 100px */
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10 and IE 11 */
+			user-select: none; /* Standard syntax */
+        }
+
+        #taskbar {
+            background-color: #e5e7e9  ;
+            color: #000000;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            box-sizing: border-box;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10 and IE 11 */
+			user-select: none; /* Standard syntax */
+        }
+
+        .window {
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 0px;
+			border: 3px solid #bdc3c7;
+            box-sizing: border-box;
+			border-radius:3px;
+        }
+
+        .window-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #626567;
+            color: white;
+            padding: 1px;
+            cursor: move;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10 and IE 11 */
+			user-select: none; /* Standard syntax */
+        }
+
+        .window-buttons {
+            display: flex;
+        }
+
+        .window-button {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            border-radius: 50%;
+            background-color: #f2f3f4 ;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+			font-size:12px;
+			color: #000000;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10 and IE 11 */
+			user-select: none; /* Standard syntax */
+        }
+
+        .icon {
+            text-align: center;
+            margin: 20px;
+            width: 100px; /* Set the width to 100px */
+			border-radius: 5px;
+			
+        }
+		.icon:hover {
+            background-color: #2980b9;
+        }
+		#start-button {
+			border-radius: 5px;
+			background-color: #d7dbdd;
+			padding:5px;
+			padding-bottom:8px;
+			width:65px;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10 and IE 11 */
+			user-select: none; /* Standard syntax */
+        }
+
+        #start-button:hover {
+            background-color: #bdc3c7;
+        }
+    </style>
+</head>
+<body>
+
+<div id="desktop">
+    <div class="icon" onclick="createWindow()"><img src="computer.png" width="75px" height="auto"><br>Computer</div>
+    <!-- Add more icons as needed -->
+</div>
+
+<div id="taskbar">
+    <div id="start-button"><img src="menu.png" height="15px" width="auto">Menu</div>
+    <div id="clock"></div>
+</div>
+
+<script>
+    function createWindow() {
+        const windowElement = document.createElement('div');
+        windowElement.className = 'window';
+
+        // Center the window on the screen
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const windowWidth = 400;  // Set your preferred width
+        const windowHeight = 300; // Set your preferred height
+
+        windowElement.style.top = `${(screenHeight - windowHeight) / 2}px`;
+        windowElement.style.left = `${(screenWidth - windowWidth) / 2}px`;
+        windowElement.style.width = `${windowWidth}px`;
+        windowElement.style.height = `${windowHeight}px`;
+
+        const windowHeader = document.createElement('div');
+        windowHeader.className = 'window-header';
+        windowHeader.addEventListener('mousedown', startDrag);
+
+        const windowTitle = document.createElement('div');
+        windowTitle.textContent = 'File Manager - [/home]';
+
+        const windowButtons = document.createElement('div');
+        windowButtons.className = 'window-buttons';
+
+        const minimizeButton = createWindowButton('🗖', () => toggleMaximize(windowElement)); // Unicode symbol for m
+        const closeButton = createWindowButton('🗙', () => windowElement.remove()); // Unicode symbol for close
+
+		windowButtons.appendChild(createWindowButton('🗕  ')); // Unicode symbol for minimize
+        windowButtons.appendChild(minimizeButton);
+        windowButtons.appendChild(closeButton);
+
+        windowHeader.appendChild(windowTitle);
+        windowHeader.appendChild(windowButtons);
+
+        windowElement.appendChild(windowHeader);
+
+        // Joke content
+        const jokeContent = document.createElement('div');
+        jokeContent.textContent = 'Why don\'t scientists trust atoms? Because they make up everything!';
+        jokeContent.style.color = 'black';
+
+        const link = document.createElement('a');
+        link.href = 'https://www.example.com';
+        link.target = '_blank';
+        link.textContent = 'Visit our website!';
+
+        const image = document.createElement('img');
+        image.src = 'https://via.placeholder.com/150';
+        image.alt = 'Random Image';
+
+        jokeContent.appendChild(document.createElement('br'));
+        jokeContent.appendChild(link);
+        jokeContent.appendChild(document.createElement('br'));
+        jokeContent.appendChild(image);
+
+        windowElement.appendChild(jokeContent);
+
+        document.getElementById('desktop').appendChild(windowElement);
+    }
+
+    function createWindowButton(text, clickHandler) {
+        const button = document.createElement('div');
+        button.className = 'window-button';
+        button.textContent = text;
+        if (clickHandler) {
+            button.addEventListener('click', clickHandler);
+        }
+        return button;
+    }
+
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    function startDrag(e) {
+        isDragging = true;
+        offsetX = e.clientX - e.target.parentNode.getBoundingClientRect().left;
+        offsetY = e.clientY - e.target.parentNode.getBoundingClientRect().top;
+
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('mouseup', stopDrag);
+    }
+
+    function drag(e) {
+        if (isDragging) {
+            const x = e.clientX - offsetX;
+            const y = e.clientY - offsetY;
+
+            document.querySelector('.window').style.left = x + 'px';
+            document.querySelector('.window').style.top = y + 'px';
+        }
+    }
+
+    function stopDrag() {
+        isDragging = false;
+        document.removeEventListener('mousemove', drag);
+        document.removeEventListener('mouseup', stopDrag);
+    }
+
+    function toggleMaximize(element) {
+        if (element.style.width === '100%' && element.style.height === '100%') {
+            // If already maximized, restore to normal state
+            element.style.width = '400px'; // Set your preferred width
+            element.style.height = '300px'; // Set your preferred height
+            element.style.top = `${(window.innerHeight - 350) / 2}px`;
+            element.style.left = `${(window.innerWidth - 450) / 2}px`;
+        } else {
+            // If not maximized, maximize
+            element.style.width = '100%';
+            element.style.height = '100%';
+            element.style.top = '0';
+            element.style.left = '0';
+        }
+    }
+
+    function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
