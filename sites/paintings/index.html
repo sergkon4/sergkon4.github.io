@@ -1,0 +1,275 @@
+<html lang="ua" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Виставка картин XVIII сторіччя | Картинна галерея</title>
+    <style type="text/css">
+    .smallscreennav{background-color: black;color:white;text-align:center;display: none;}
+	.smallmenulink{color:white;text-decoration:none;}
+	.smallmenulink:hover{text-decoration:none; color:#C5CFFF;}
+	.gimage{height:200px;width:auto}
+	
+
+    @media only screen and (max-width: 600px) {
+      .normalscreennav{display:none;}
+      .smallscreennav{display: block; padding: 10px;}
+      .gimage{height:auto;width:80%;padding-bottom:20px;}
+
+    }
+    </style>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+ $(document).ready(function(){
+    $("#menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+$(document).ready(function(){
+   $("#smallmenu").on("click","a", function (event) {
+       event.preventDefault();
+       var id  = $(this).attr('href'),
+           top = $(id).offset().top;
+       $('body,html').animate({scrollTop: top}, 1500);
+   });
+});
+
+</script>
+  </head>
+  <body>
+
+	<div class="normalscreennav">
+	  <nav style="width:100%; background-color:black;" class="navbar navbar-expand-md navbar-dark" >
+	  <div class="navbar-header">
+		<a class="navbar-brand" href="#"><p style="margin-left:5%; color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
+	  </div>
+	  <ul  class="navbar-nav mr-auto" role="tablist" id="menu" style=" p-right:0px;">
+		<li role="presentation" class=""><a class="nav-link" href="#tab1" role="tab" data-toggle="tab">Замовити квиток</a></li>
+		<li role="presentation" class=""><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Як дістатися</a></li>
+	  </ul>
+
+	  </nav>
+	</div>
+	<div class=smallscreennav id="smallmenu">
+
+		<a  href="#"><p style=" color: white; font-size: 30px; font family:'Courier New', Courier, monospace;"><img src="Logo.png" height="55px" alt="logo" style="padding-top:15px;"></p></a>
+		<p>
+		  <a href="#tab1" class="smallmenulink" >Замовити квиток</a> | 
+		  <a href="#tab2" class="smallmenulink" >Як дістатися</a>
+		</p>
+	</div>
+	
+    <div class="" style="height:80vh;width:auto;position:relative;z-index:1;">
+			<div id="demo" class="carousel slide" data-ride="carousel" style="width:100%;height:100%;position:absolute;z-index:2;">
+				<div class="carousel-inner">
+					<div class="carousel-item active" style="width:100%;height:100%;background-image:url(images/f1d6923c9ceac09c9bc267d71312fe6b.jpg); background-size: cover;">
+					</div>
+					<div class="carousel-item" style="width:100%;height:100%;background-image:url(images/aa9d89ef5b02e10c541f15e3de56632c.jpg); background-size: cover;">
+					</div>
+					<div class="carousel-item" style="width:100%;height:100%;background-image:url(images/8299.jpg); background-size: cover;">
+					</div>
+				</div>
+
+			</div>
+			<article style="background-color:black;height:100%;width:100%;position:absolute;opacity: 0.4;z-index:3;"><div style="font-size:45px;font-family:calibri;position:relative;top:35%;bottom:45%;color:white;text-align:center;z-index:3;"><h1><b>Виставка картин</b></h1><hr style="border-top: 3px solid #ffffff; width:80px;"><p style="font-size:20px;">XVIII Сторіччя</p></div></article>
+    </div>
+
+    <div class="container-fluid" style="background-color:white;">
+    <!-- Control the column width, and how they should appear on different devices -->
+    <div class="row">
+      <p><br></p>
+      </div>
+      <div class="row">
+        <p></p>
+        </div>
+    <div class="row">
+      <div class="col-sm-6" style="background-color:white;text-align:center;"><h2>Більше ніж 20 картин</h2></div>
+      <div class="col-sm-6" style="background-color:white;"><p>Лише до 21 лютого у нашому арт-центрі проходить виставка з 23 картин 18-го століття.<br>Ви зможете побачити роботи таких художників як Леон Бонвен, Бернардо Беллотто<br>та Анна Валлайє-Костер.</p><p>Ви поринете в атмосферу того часу завдяки запрошеним музикантам.</p></div>
+    </div>
+    <div class="row">
+      <p><br></p>
+      </div>
+      <div class="row">
+        <p><br></p>
+        </div>
+    <p></p>
+    <div class="container-fluid">
+      <div class="row">
+        <p><br></p>
+        
+  
+        <p></p>
+        </div>
+      <div class="row">
+      <div class="col-sm-12"><h3 align="center"><p><br></p>Картини представлені в нашії експозиції<p></p></h3></div>
+      </div>
+      <div class="row">
+        <p></p>
+        </div>
+        <div class="row">
+          <p></p>
+          </div>
+    </div>
+    <div class="row" style="background-color:#fafafa;">
+      <p><br></p>
+      </div>
+  <div class="row" style="background-color:#fafafa; text-align:center;">
+    <p><br></p>
+    <div class="col-lg-2 col-md-2 col-sm-3" >
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;">
+          <a data-fancybox="gallery" href="images/bg.jpg">
+              <img class="gimage" src="images/bg.jpg" alt="...">
+          </a>
+      </div>
+	<div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;text-align:center;">
+          <a data-fancybox="gallery" href="images/u42.png">
+              <img class="gimage" src="images/u42.png" alt="...">
+          </a>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;">
+          <a data-fancybox="gallery" href="images/mellen1850s.jpg">
+              <img class="gimage" src="images/mellen1850s.jpg" alt="...">
+          </a>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;">
+          <a data-fancybox="gallery" href="images/1260517.jpg">
+              <img class="gimage" src="images/1260517.jpg" alt="...">
+          </a>
+      </div>
+
+      <div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;">
+        </div>
+  </div>
+  <div class="row" style="background-color:#fafafa;">
+    <p><br></p>
+    </div>
+  <div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;">
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;text-align:center;">
+          <a data-fancybox="gallery" href="images/1630449_1024x1024.webp">
+              <img class="gimage" src="images/1630449_1024x1024.webp" alt="...">
+          </a>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;text-align:center;">
+          <a data-fancybox="gallery" href="images/portrait.jpg">
+              <img class="gimage" src="images/portrait.jpg" alt="...">
+          </a>
+      </div>
+	<div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;text-align:center;">
+          <a data-fancybox="gallery" href="images/f1d6923c9ceac09c9bc267d71312fe6b.jpg">
+              <img class="gimage" src="images/f1d6923c9ceac09c9bc267d71312fe6b.jpg" alt="...">
+          </a>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;text-align:center;">
+          <a data-fancybox="gallery" href="images/aa9d89ef5b02e10c541f15e3de56632c.jpg">
+              <img class="gimage" src="images/aa9d89ef5b02e10c541f15e3de56632c.jpg" alt="...">
+          </a>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-3" style="background-color:#fafafa;">
+        </div>
+
+  </div>
+  <div class="row" style="background-color:#fafafa;">
+    <a name="tab1"></a>
+    <a name="tab2"></a>
+    <p><br></p>
+    </div>
+</div>
+
+
+<div class="tab-content">
+  <div id="tab1">
+  <p><br></p>
+  <p></p>
+
+      <h3 align="center">Замовити квиток</h3>
+
+      <p><br></p>
+      <p></p>
+    <div class="container-fluid" style="background-color:#fafafa; float:center;">
+      <div class="row">
+        <p><br></p>
+        </div>
+        <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+        </div>
+      <div class="col-lg-6 col-md-6 col-sm-3">
+         <form action="./mail.php" method="post">
+      <div class="form-group">
+         <label for="name">Прізвище</label>
+         <input type="name" name="name" class="form-control" id="name" placeholder="Прізвище">
+      </div>
+      <div class="form-group">
+         <label for="email1">Ім'я</label>
+         <input type="email" name="email" class="form-control" id="lastname" placeholder="Ім'я">
+      </div>
+      <div class="form-group">
+         <label for="email1">По батькові</label>
+         <input type="email" name="email" class="form-control" id="middlename" placeholder="По батькові">
+      </div>
+      <div class="form-group">
+         <label for="phone">Телефон</label>
+         <input type="phone" name="phone" class="form-control" id="phone" placeholder="Телефон">
+      </div>
+         <button type="submit" class="btn btn-info" style="background-color:grey; line-color:white;">Відправити повідомлення</button>
+      </form>
+      </div>
+
+    </div>
+    <div class="row">
+          <p><br></p>
+    </div>
+    </div>
+    </div>
+
+    <div id="tab2">
+		<p><br></p>
+		<p></p>
+        <h3 align="center">Як дістатися</h3>
+        <p><br></p>
+		<p></p>
+    <div class="container-fluid" style="background-color:#fafafa; float:center;">
+      <div class="row">
+        <p><br></p>
+        </div>
+        <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+        </div>
+      <div style="text-align:center;" class="col-lg-6 col-md-6 col-sm-3">
+        <p>Київ, вул Пироговского, 3 л</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61811.18762335209!2d30.50090285056578!3d50.43345704210919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1588330841177!5m2!1sru!2sua" style="max-width:100%; max-height:100%; width:450px; height:400px; border:0;" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3">
+      </div>
+      </div>
+      <div class="row">
+              <p><br></p>
+			  <p><br></p>
+				<p><br></p>
+      </div>
+      </div>
+
+      </div>
+      </div>
+<footer style="background-color:black;height:270px;postition:relative;">
+  <div class="container-fluid" style="; float:center;">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-1">
+      </div>
+
+<div class="col-lg-8 col-md-8 col-sm-10" style="text-align:center;position:absoulte;padding-top:70px;color:white;"><p>&copy 2021 Сергій Кондратюк</p>
+<p style="text-align:center;"><a href="facebook.com"><img src="images/facebook1.png" height="25px"> <a href="facebook1.com"><img src="images/twitter.png" height="25px"></a> <a href="facebook.com"><img src="images/instagram.png" height="25px"></p></div>
+
+<div class="col-lg-2 col-md-2 col-sm-1">
+</div>
+</div>
+</footer>
+
+  </body>
+</html>

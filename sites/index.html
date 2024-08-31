@@ -1,0 +1,71 @@
+<html lang="uk">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Портофоліо
+  </title>
+</head>
+<body>
+<style type="text/css">
+body{background-image: url(2-1.jpg);background-size: cover; font-family:Helvetica; font-size:16; background-repeat: no-repeat;background-attachment: fixed;}
+.main1{position:absolute;left:15%;background-color: white; width:275px;margin-top:5%;padding:20px;padding-bottom:60px;border-radius:10px; width:350px;}
+.main2{position:absolute;right:15%;background-color: white; width:275px;margin-top:5%;padding:20px;padding-bottom:60px;border-radius:10px; width:350px;}
+.mobile{display:none;}
+.text1{width: 100%;}
+.a3{cursor: pointer;border: 2px solid white; color:white;height: 45px;width: 145px;background-color:black;border-radius: 10px;font-size:20px; transition: 0.3s; -webkit-user-select: none; -ms-user-select: none; user-select: none;}
+.a3:hover{ cursor: pointer; border: 2px solid black;color:black;height: 45px;width: 145px;background-color:white;border-radius: 10px;font-size:20px;}
+.text{text-align: center;}
+@media only screen and (max-width: 1100px) {
+  .main1{display:none;}
+  .main2{display:none;}
+  .mobile{display:block;background-color: white; margin-top:5%;margin:auto;padding:20px;padding-bottom:60px;border-radius:10px; width:350px;}
+}
+</style>
+<div class="main1">
+<p>Виставка картин</p><!--Поле e-mail  -->
+<div align=center>
+<img src="paintings.png">
+</p>
+<br>
+<p align=center>    <!--Кнопка -->
+<button class="a3" onclick="location.href='/sites/paintings/index.html'">Увійти</button>
+</p>
+</div>
+</div>
+
+<div class="main2">
+<p>Сайт вигаданної компанії</p><!--Поле e-mail  -->
+<div align=center>
+<img src="nothinginc.png">
+</p>
+<br>
+<p align=center>    <!--Кнопка -->
+<button class="a3" onclick="location.href='/sites/nothinginc/index.html'">Увійти</button>
+</p>
+</div>
+</div>
+<div class="mobile">
+  <p>Виставка картин</p><!--Поле e-mail  -->
+  <div align=center>
+  <img src="paintings.png">
+  </p>
+  <br>
+  <p align=center>    <!--Кнопка -->
+  <button class="a3" onclick="location.href='/sites/paintings/index.html'">Увійти</button>
+  </p>
+  </div>
+  <p>
+  <br>
+  </p>
+  <p>Сайт вигаданної компанії</p><!--Поле e-mail  -->
+  <div align=center>
+  <img src="nothinginc.png">
+  </p>
+  <br>
+  <p align=center>    <!--Кнопка -->
+  <button class="a3" onclick="location.href='/sites/nothinginc/index.html'">Увійти</button>
+  </p>
+  </div>
+</div>
+</body>
+</html>
