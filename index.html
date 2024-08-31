@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <title>Сергій Кондратюк | Персональний сайт</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body{margin: auto;max-width:1368px;}
+    .menu{text-align:center;word-spacing: 12px;line-height: 60px;}
+    .menulink{text-decoration:none; color:black;}
+    .menulink:hover{text-decoration:none;color:grey;}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+	$(document).ready(function(){
+    $(".menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+  </script>
+  <style type="text/css">
+	.preview-img {
+	width: 100%;
+	padding-bottom: 100%;
+	height: 0;
+	object-fit: cover;
+}
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;margin-top:11px;font-family:Roboto;">Serhii Kondratiuk</h1>
+  <hr style="border: 1px solid black; width:35%;">
+<p class="menu">
+<a class="menulink" href="#web_design">Веб-дизайн</a>  <a class="menulink" href="#3D">3D</a>  <a class="menulink" href="mailto:sergkon4@gmail.com">E-mail</a>
+</p>
+<div class="container-fluid">
+<div class="row" style="padding-top:5%;">
+    <div class="col-sm-7" style="background-color:white; text-align:left; padding-left:5%;padding-right:5%;padding-bottom:15%;">
+		<h1>Hello World!</h1>
+		<p>Я випускник університету «КРОК» ННІ інфомоційних та комунікаційних технологій за спеціалізацією «Компютерна графіка та дизайн».</p>
+		<p>Я комунікабельний, здатний працювати самостійно і як частина команди. </p>
+		<p>Мої знання: C#, Python, HTML5. Javascript, XAMMP, MySQL, Bootstrap,  Комп'ютерна графіка.</p>
+		<p height="30px"><a href="https://www.facebook.com/profile.php?id=100051859326768"><img src="facebook.png" height="50px" width="auto"></a><a href="https://instagram.com/k.ondratiuk"><img src="instagram.png" height="50px" width="auto"></a><a href="https://www.linkedin.com/in/serhiikondratiuk/"><img src="linkedin.png" height="50px" width="auto"></a>
+	</div>
+    <div class="col-sm-5" style="background-color:white; text-align:center;">
+					<img src = "sergkon4.png" class = "rounded-circle" alt = "Rounded Image" width = "200px" height = "200px">
+		</div>
+  </div>
+
+  <h1 id="web_design" style="padding: 70px 0;text-align: center;background-image: url("group-of-people-working-out-business-plan-in-an-office.png">Веб-дизайн</h1>
+  <div class="row">
+    <div class="col-sm-4" style="background-color:white; text-align:center;"><a href="sites\paintings\"><img src="img1.png" width="100%" height="auto"></a></div>
+    <div class="col-sm-4" style="background-color:white; text-align:center;"><a href="\sites\nothinginc\"><img src="img2.png" width="100%" height="auto"></a></div>
+    <div class="col-sm-4" style="background-color:white; text-align:center;"></h2></div>
+  </div>
+  <h1 id="3D" style="padding: 70px 0;text-align: center;background-image: url("group-of-people-working-out-business-plan-in-an-office.png">3D-моделі</h1>
+  <div class="row">
+    <div class="col-sm-4" style="background-color:white; text-align:center;"><h2><img class="preview-img}" src="img4.jpg" width="100%" height="auto"></h2></div>
+    <div class="col-sm-4" style="background-color:white; text-align:center;"><h2><img src="img3.jpg" width="100%" height="auto"></h2></div>
+    <div class="col-sm-4" style="background-color:white; text-align:center;"><h2><img src="img5.jpg" width="100%" height="auto"></h2></div>
+  </div>
+</div>
+</div>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+
+	<hr style="border: 1px solid black; width:35%;">
+	<p align="center">&copy 2021 Сергій Кондратюк</p>
+<p><br></p>
+</body>
+</html>
